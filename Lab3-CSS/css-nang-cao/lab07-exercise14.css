@@ -1,7 +1,11 @@
 figure {
-    margin: 2em;
-    padding: 1em;
-    background: #FFCC80;
-    width: 200px;
+  margin: 2em;
+  padding: 1em;
+  background: #ffcc80;
+  width: 200px;
+  transform: rotate(45deg) scale(0.5);
+}
 
+figure img {
+  transform: translatex(100px) translatey(-30px);
 }
