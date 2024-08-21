@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      *:hover {
+        outline: 5px solid rgb(255, 0, 0);
+      }
+
+      section,
+      header,
+      hgroup,
+      footer,
+      nav,
+      article,
+      aside,
+      figure,
+      figcaption {
+        border: 1px solid rgb(255, 255, 255);
+        background-color: rgba(153, 153, 153, 0.25);
+        display: block;
+        padding: 5px;
+        margin: 5px;
+      }
+
+      section,
+      aside {
+        float: left;
+      }
+
+      header,
+      footer {
+        clear: both;
+      }
+
+      #pagecontent {
+        margin: 0 auto;
+        max-width: 1045px;
+        min-width: 480px;
+        width: 100%;
+      }
+
+      #pageheader,
+      #pagefooter {
+        max-width: 1020px;
+        min-width: 480px;
+        width: 100%;
+      }
+      #sectioncontent1 {
+        max-width: 600px;
+        min-width: 400px;
+        width: 100%;
+      }
+
+      #asidecontent1 {
+        max-width: 400px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="pagecontent">
+      <header id="pageheader" class="pageheader">
+        <hgroup id="pagehgroup" class="pagehgroup">
+          <h1 class="sitename">
+            <a href="/" rel="home" title="Home">HTML5 Structure</a>
+          </h1>
+          <h2 class="subtitle">Page Header</h2>
+        </hgroup>
+
+        <nav id="globalnav" class="globalnav">
+          <p>Navigation</p>
+        </nav>
+      </header>
+
+      <section id="sectioncontent1" class="sectioncontent">
+        <header id="sectionheader1" class="sectionheader">
+          <h2>Section Header</h2>
+        </header>
+
+        <article id="articlecontent1" class="articlecontent">
+          <header id="articleheader1" class="articleheader">
+            <h3>Article Header</h3>
+          </header>
+          <p>Article</p>
+          <figure id="figure1">
+            <p>Figure</p>
+            <figcaption>Figure Caption</figcaption>
+          </figure>
+          <footer id="articlefooter1" class="articlefooter">
+            <p>Article footer</p>
+          </footer>
+        </article>
+
+        <article>
+          <header id="articleheader2" class="articleheader">
+            <h3>Article Header</h3>
+          </header>
+          <p>Article</p>
+          <figure id="fugure2">
+            <p>Figure</p>
+            <figcaption>Figure Caption</figcaption>
+          </figure>
+          <footer id="articlefooter2" class="articlefooter">
+            <p>Article footer</p>
+          </footer>
+        </article>
+
+        <footer id="sectionfooter1" class="sectionfooter">
+          <p>Section Footer</p>
+        </footer>
+      </section>
+
+      <aside id="asidecontent1" class="asidecontent">
+        <header class="sectionheader">
+          <h2>Aside Header</h2>
+        </header>
+
+        <article>
+          <header class="articleheadeer">
+            <h3>Aside Article Header</h3>
+          </header>
+          <p>Aside Article Copy</p>
+          <footer id="articlefooter2" class="articlefooter">
+            <p>Aside Article footer</p>
+          </footer>
+        </article>
+
+        <article>
+          <header class="articleheadeer">
+            <h3>Aside Article Header</h3>
+          </header>
+          <p>Aside Article Copy</p>
+          <footer class="articlefooter">
+            <p>Aside Article footer</p>
+          </footer>
+        </article>
+
+        <article>
+          <header class="articleheadeer">
+            <h3>Aside Article Header</h3>
+          </header>
+          <p>Aside Article Copy</p>
+          <footer class="articlefooter">
+            <p>Aside Article footer</p>
+          </footer>
+        </article>
+
+        <footer class="articlefooter">
+          <p>Aside footer</p>
+        </footer>
+      </aside>
+
+      <footer id="pagefooter" class="pagefooter">
+        <p>Page Footer</p>
+      </footer>
+    </div>
+  </body>
+</html>

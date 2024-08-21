@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài tập 4</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      * {
+        margin: 0;
+      }
+
+      header {
+        background-color: #004b41;
+        color: white;
+      }
+
+      header ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+      }
+      header ul li {
+        margin-right: 20px;
+        /* transform: all 1s ease-in; */
+      }
+      header ul li:hover {
+        color: #99b7b3;
+        cursor: pointer;
+      }
+
+      .blog {
+        position: absolute;
+        width: 35%;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        margin-right: 20px;
+      }
+
+      .blog .blog-item {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .blog .blog-item .inner-image img {
+        width: 100%;
+      }
+
+      .blog .blog-item .inner-image,
+      .blog .blog-item h2,
+      .blog .blog-item p {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li>GIỚI THIỆU <i class="fa-solid fa-location-arrow"></i></li>
+        <li>ĐÀO TẠO <i class="fa-solid fa-location-arrow"></i></li>
+        <li>NGHIÊN CỨU <i class="fa-solid fa-location-arrow"></i></li>
+        <li>GIẢNG VIÊN <i class="fa-solid fa-location-arrow"></i></li>
+        <li>SINH VIÊN <i class="fa-solid fa-location-arrow"></i></li>
+        <li><i class="fa-solid fa-arrow-right-from-bracket"></i> ĐĂNG NHẬP</li>
+      </ul>
+    </header>
+    <div class="blog">
+      <div class="blog-item">
+        <div class="inner-image">
+          <img
+            src="https://bit.ueh.edu.vn/wp-content/uploads/2024/07/OPL_Poster-331x197.jpg"
+            alt=""
+          />
+        </div>
+        <h2>
+          CUỘC THI OLYMPIC TIN HỌC CẤP UEH ĐỂ TUYỂN CHỌN ĐỘI TUYỂN THAM GIA KỲ
+          THI OLYMPIC TIN HỌC SINH VIÊN VIỆT NAM LẦN THỨ 33 NĂM 2024
+        </h2>
+        <p>
+          ♥ CUỘC THI OLYMPIC TIN HỌC CẤP UEH ĐỂ TUYỂN CHỌN ĐỘI TUYỂN THAM GIA KỲ
+          THI OLYMPIC TIN HỌC SINH VIÊN VIỆT NAM LẦN THỨ 33 NĂM 2024 ♥ Các bạn
+          sinh viên UEH thân mến, Olympic Tin học Sinh viên...
+        </p>
+      </div>
+      <div class="blog-item">
+        <div class="inner-image">
+          <img
+            src="https://bit.ueh.edu.vn/wp-content/uploads/2024/02/ATTT-331x197.png"
+            alt=""
+          />
+        </div>
+        <h2>An toàn thông tin</h2>
+        <p>
+          Giới thiệu Sinh viên được trang bị kiến thức chuyên sâu về xây dựng,
+          triển khai, quản trị và tiến tới có thể đưa ra chiến lược cũng như tư
+          vấn kiến trúc các hệ thống ATTT tiên tiến. Đặc biệt,...
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
