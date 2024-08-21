@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #72c055;
+  width: 100%;
+  height: 50px;
+}
+
+.wrap-content {
+  display: flex;
+}
+
+nav {
+  background-color: #c1d2ff;
+  width: 20%;
+  height: 500px;
+}
+main {
+  background-color: #ffdae7;
+  width: 100%;
+  height: 500px;
+}
+footer {
+  background-color: #72c055;
+  width: 100%;
+  height: 50px;
+}

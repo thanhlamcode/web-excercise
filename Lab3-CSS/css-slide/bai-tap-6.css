@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.analytic {
+  background-image: url("https://t4.ftcdn.net/jpg/02/10/45/95/360_F_210459536_XmLDEcKq2DpeNLVmheuWeu9NM9aGKnih.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.analytic ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 80px;
+}
+
+.analytic ul li {
+  text-align: center;
+}
+
+.analytic ul li p {
+  margin-bottom: 20px;
+  color: rgb(57, 54, 48);
+}
+
+.analytic ul li p:nth-child(1) {
+  font-size: 20px;
+}
+
+.analytic ul li p:nth-child(2) {
+  font-size: 40px;
+}

@@ -1,0 +1,28 @@
+.logo {
+  text-align: center;
+}
+
+h2,
+.lead-text {
+  text-align: center;
+}
+
+strong {
+  color: #00aeef;
+}
+
+.btn-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.btn-list a {
+  color: white;
+  background-color: black;
+  padding: 15px;
+  text-decoration: none;
+  margin-left: 10px;
+  border-radius: 10px;
+}

@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+}
+
+.header {
+  background-color: #f8f8f8;
+  padding: 30px 0;
+}
+
+.portfolio h2 {
+  text-align: center;
+}
+
+.header .list-tab {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.header .list-tab li {
+  margin-right: 20px;
+  font-weight: 700;
+}
+
+.header .list-tab li a {
+  text-decoration: none;
+  color: black;
+}
+
+.header .list-tab li:first-child a {
+  color: #5aabab;
+}
+
+.galerry {
+  margin: 0 50px;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.galerry li {
+  width: calc(30%);
+  margin-right: 20px;
+}
+
+.galerry li img {
+  width: 100%;
+}

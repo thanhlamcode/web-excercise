@@ -1,0 +1,20 @@
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul li {
+  padding: 20px;
+  background-color: #01bacf;
+  color: white;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+}
