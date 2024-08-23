@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div.at-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        scale: 3;
+      }
+      .at-item {
+        width: 100px;
+        height: 100px;
+        background-color: #ffe672;
+
+        animation-name: rotate-in-center;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: none;
+      }
+      @keyframes rotate-in-center {
+        0% {
+          transform: rotate(-360deg);
+          opacity: 0;
+        }
+        20% {
+          transform: rotate(60);
+          opacity: 1;
+        }
+        40% {
+          transform: rotate(120);
+          opacity: 0;
+        }
+        60% {
+          transform: rotate(240);
+          opacity: 1;
+        }
+        80% {
+          transform: rotate(300);
+          opacity: 0;
+        }
+        100% {
+          transform: rotate(360);
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="at-container">
+      <div class="at-item"></div>
+    </div>
+  </body>
+</html>

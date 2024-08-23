@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài tập 2</title>
+    <style>
+      div.at-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+      .at-item {
+        color: #3079ed;
+        font-weight: bold;
+        font-size: 3em;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        font-size: 50px;
+        animation: combined-effect 5s linear infinite;
+      }
+
+      @keyframes combined-effect {
+        20%,
+        100% {
+          text-shadow: 0 0px 15px #f0f;
+        }
+        40% {
+          text-shadow: 0 0px 15px #0ff;
+        }
+        60% {
+          text-shadow: 0 0px 10px #0f0;
+        }
+        80% {
+          text-shadow: 0 0px 10px #ff0;
+        }
+        100% {
+          text-shadow: 0 0px 15px #f0f;
+        }
+        0% {
+          transform: translateX(800px) rotateY(-30deg) scale(0);
+          transform-origin: -100% 50%;
+          opacity: 0;
+        }
+        20% {
+          transform: translateX(0) rotateY(0) scale(1);
+          transform-origin: -1800px 50%;
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="at-container">
+      <div class="at-item">Đại học UEH</div>
+    </div>
+  </body>
+</html>
