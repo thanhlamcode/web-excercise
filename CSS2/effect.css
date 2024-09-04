@@ -1,0 +1,69 @@
+header {
+  display: flex;
+  justify-content: center;
+  background-color: #cbcbcb;
+}
+
+header img {
+  width: 50px;
+  object-fit: contain;
+  margin-right: 20px;
+}
+
+header h1 {
+  color: white;
+  text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
+}
+
+.superheroes {
+  display: flex;
+  justify-content: center;
+  padding: 0 50px;
+}
+
+.superheroes li {
+  list-style-type: none;
+  width: 18%;
+  margin-right: 5px;
+  text-align: center;
+  overflow: hidden;
+  transition: all ease-in 0.5s; /* Giảm thời gian để làm mượt hiệu ứng */
+  transform-origin: center; /* Đặt điểm gốc để scale */
+}
+
+.superheroes img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.wrap {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.hero-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: rgb(238, 233, 233);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 1;
+  width: 100%;
+  height: 25px;
+}
+
+.superheroes a {
+  background-color: #636363;
+  display: block;
+  padding: 5px;
+  width: 100%;
+  color: white;
+  display: none;
+}
+
+.superheroes a:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
