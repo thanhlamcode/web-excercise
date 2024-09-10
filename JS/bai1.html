@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 1</title>
+    <style>
+      h1 {
+        color: blue;
+        font-weight: 700;
+      }
+
+      h2 {
+        color: red;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <label for="name">Nhập tên: </label>
+    <input type="text" id="name" />
+    <label for="age">Nhập tuổi: </label>
+    <input type="text" id="age" />
+
+    <h1>Tên: <span class="name"></span></h1>
+    <h2>Tuổi: <span class="age"></span></h2>
+    <script>
+      const name = document.querySelector("input[id='name']");
+      const age = document.querySelector("input[id='age']");
+      const nameResult = document.querySelector("span[class='name']");
+      const ageResult = document.querySelector("span[class='age']");
+
+      name.addEventListener("change", () => {
+        nameResult.innerHTML = name.value;
+      });
+
+      age.addEventListener("change", () => {
+        ageResult.innerHTML = age.value;
+      });
+    </script>
+  </body>
+</html>

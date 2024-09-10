@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cảnh báo tên</title>
+    <script>
+      function showAlert() {
+        var name = document.getElementById("fullName").value;
+        alert("Truy tìm " + name);
+      }
+    </script>
+  </head>
+  <body>
+    <label for="fullName">Họ và tên:</label>
+    <input type="text" id="fullName" name="fullName" />
+    <button onclick="showAlert()">Cảnh báo</button>
+  </body>
+</html>

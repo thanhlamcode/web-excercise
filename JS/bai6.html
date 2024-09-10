@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .choice {
+        display: flex;
+        width: 30%;
+        justify-content: space-around;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>BẠN CÓ THÍCH MÌNH KHÔNG?</h1>
+    <div class="choice">
+      <button id="yes">CÓ</button>
+      <button id="no">KHÔNG</button>
+    </div>
+
+    <script>
+      const buttonYes = document.querySelector("#yes");
+      const buttonNo = document.querySelector("#no");
+      let count = 0;
+
+      // Function to swap the buttons
+      function swapButtons() {
+        const parent = buttonYes.parentNode;
+        parent.insertBefore(buttonNo, buttonYes);
+      }
+
+      function swapButtons2() {
+        const parent = buttonYes.parentNode;
+        parent.insertBefore(buttonYes, buttonNo);
+      }
+
+      buttonNo.addEventListener("click", () => {
+        if (count < 3) {
+          count++;
+          alert("Bạn nên chọn lại");
+        } else {
+          count++;
+          if (count % 2 == 0) {
+            swapButtons();
+          } else {
+            swapButtons2();
+          }
+        }
+      });
+      buttonYes.addEventListener("click", () => {
+        alert("Bạn không phải đối tượng của mình!");
+      });
+    </script>
+  </body>
+</html>
