@@ -6,9 +6,15 @@
     <title>Document</title>
     <style>
       .choice {
+        position: relative;
         display: flex;
         width: 30%;
         justify-content: space-around;
+      }
+
+      #no {
+        position: relative;
+        transition: transform 0.2s ease-in-out; /* Thêm thuộc tính transition */
       }
     </style>
   </head>
@@ -24,32 +30,25 @@
       const buttonNo = document.querySelector("#no");
       let count = 0;
 
-      // Function to swap the buttons
-      function swapButtons() {
-        const parent = buttonYes.parentNode;
-        parent.insertBefore(buttonNo, buttonYes);
-      }
-
-      function swapButtons2() {
-        const parent = buttonYes.parentNode;
-        parent.insertBefore(buttonYes, buttonNo);
-      }
-
       buttonNo.addEventListener("click", () => {
         if (count < 3) {
           count++;
           alert("Bạn nên chọn lại");
-        } else {
-          count++;
-          if (count % 2 == 0) {
-            swapButtons();
-          } else {
-            swapButtons2();
-          }
         }
       });
+
       buttonYes.addEventListener("click", () => {
         alert("Bạn không phải đối tượng của mình!");
+      });
+
+      // Add hover effect after 3 clicks
+      buttonNo.addEventListener("mouseover", () => {
+        if (count >= 3) {
+          // Randomize the position of the "NO" button
+          const randomX = Math.floor(Math.random() * 400) - 100; // Random value between -100 and 100
+          const randomY = Math.floor(Math.random() * 400) - 100; // Random value between -100 and 100
+          buttonNo.style.transform = `translate(${randomX}px, ${randomY}px)`;
+        }
       });
     </script>
   </body>
