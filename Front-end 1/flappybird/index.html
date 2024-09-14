@@ -7,15 +7,20 @@
   </head>
   <body>
     <div id="container">
-      <span id="level">Level: 1 </span>
       <div id="bird"></div>
       <div id="pole_1" class="pole"></div>
       <div id="pole_2" class="pole"></div>
       <button id="play_btn">Click vào để chơi</button>
       <span id="score">0</span>
+      <div id="game">
+        <canvas id="canvas"></canvas>
+        <div id="level">Level: 1</div>
+      </div>
     </div>
+
     <button id="restart_btn">Chơi lại</button>
     <script src="js/jquery.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/levelup.js"></script>
   </body>
 </html>

@@ -40,6 +40,7 @@ $(function () {
           if (score_updated === false) {
             score.text(parseInt(score.text()) + 1); // Cộng 1 điểm
             score_updated = true;
+            interval = updateLevel(parseInt(score.text())); // Gọi hàm updateLevel để cập nhật cấp độ
           }
         }
 
@@ -61,20 +62,23 @@ $(function () {
           go_down(); // Hàm di chuyển chú chim rơi xuống
         }
       }
-    }, 40);
+    }, interval); // Sử dụng biến interval từ levelup.js
   }
 
-  // Thay thế sự kiện nhấp chuột bằng sự kiện nhấn phím mũi tên xuống
-  $(document).keydown(function (e) {
-    if (e.key === "ArrowDown") {
-      go_up = setInterval(up, 40); // Khi nhấn mũi tên xuống thì chú chim bay lên
+  // Khi nhả phím mũi tên xuống
+  $(document).keyup(function (e) {
+    if (e.keyCode === 40) {
+      // keyCode 40 là mã phím mũi tên xuống
+      clearInterval(go_up); // Xoá realtime hành động bay lên cho chú chim
+      go_up = false;
     }
   });
 
-  $(document).keyup(function (e) {
-    if (e.key === "ArrowDown") {
-      clearInterval(go_up); // Khi nhả phím mũi tên xuống thì dừng bay lên
-      go_up = false;
+  // Khi ấn phím mũi tên xuống
+  $(document).keydown(function (e) {
+    if (e.keyCode === 40) {
+      // keyCode 40 là mã phím mũi tên xuống
+      go_up = setInterval(up, 40); // Realtime hành động bay lên cho chú chim
     }
   });
 
@@ -135,81 +139,3 @@ $(function () {
     }
   }
 });
-
-var current_level = 1; // Bắt đầu từ Level 1
-var game_interval = 40; // Mốc thời gian Level 1
-
-function updateLevel() {
-  var current_score = parseInt(score.text());
-
-  if (current_score >= 50) {
-    stop_the_game(true); // Chiến thắng khi đạt 50 điểm
-  } else if (current_score >= 40 && current_level < 4) {
-    current_level = 4;
-    game_interval = 20;
-    level.text("Level: 4");
-    restartGame();
-  } else if (current_score >= 20 && current_level < 3) {
-    current_level = 3;
-    game_interval = 25;
-    level.text("Level: 3");
-    restartGame();
-  } else if (current_score >= 5 && current_level < 2) {
-    current_level = 2;
-    game_interval = 30;
-    level.text("Level: 2");
-    restartGame();
-  }
-}
-
-function restartGame() {
-  clearInterval(playGame()); // Dừng trò chơi hiện tại
-  playGame(); // Khởi động lại trò chơi với tốc độ mới
-}
-
-// Thay đổi hàm playGame để gọi updateLevel:
-function playGame() {
-  var the_game = setInterval(function () {
-    if (
-      collision(bird, pole_1) ||
-      collision(bird, pole_2) ||
-      parseInt(bird.css("top")) <= 0 ||
-      parseInt(bird.css("top")) > container_height - bird_height
-    ) {
-      stop_the_game();
-    } else {
-      var pole_current_position = parseInt(pole.css("right"));
-      if (pole_current_position > container_width - bird_left) {
-        if (!score_updated) {
-          score.text(parseInt(score.text()) + 1);
-          score_updated = true;
-          updateLevel(); // Cập nhật cấp độ khi điểm tăng
-        }
-      }
-
-      if (pole_current_position > container_width) {
-        var new_height = parseInt(Math.random() * 100);
-        pole_1.css("height", pole_initial_height + new_height);
-        pole_2.css("height", pole_initial_height - new_height);
-        score_updated = false;
-        pole_current_position = pole_initial_position;
-      }
-
-      pole.css("right", pole_current_position + speed);
-
-      if (!go_up) {
-        go_down();
-      }
-    }
-  }, game_interval);
-}
-
-// Thay đổi hàm stop_the_game để hiển thị thông báo chiến thắng
-function stop_the_game(victory = false) {
-  clearInterval(playGame());
-  game_over = true;
-  if (victory) {
-    alert("Chiến thắng!");
-  }
-  $("#restart_btn").slideDown();
-}
