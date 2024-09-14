@@ -16,6 +16,41 @@
     <!-- xZoom CSS -->
     <link rel="stylesheet" href="https://unpkg.com/xzoom/dist/xzoom.css" />
 
+    <!-- Thêm tag sản phẩm mới và giảm giá -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <!-- End tag sản phẩm mới và giảm giá -->
+
+    <!-- Thay đổi sao đánh giá -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"> -->
+    <link
+      href="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/css/star-rating.min.css"
+      media="all"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- with v4.1.0 Krajee SVG theme is used as default (and must be loaded as below) - include any of the other theme CSS files as mentioned below (and change the theme property of the plugin) -->
+    <link
+      href="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/themes/krajee-svg/theme.css"
+      media="all"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- important mandatory libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/js/star-rating.min.js"
+      type="text/javascript"
+    ></script>
+
+    <!-- with v4.1.0 Krajee SVG theme is used as default (and must be loaded as below) - include any of the other theme JS files as mentioned below (and change the theme property of the plugin) -->
+    <script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/themes/krajee-svg/theme.js"></script>
+    <!-- End thanh đổi sao đánh giá -->
+
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
@@ -35,8 +70,42 @@
         height: 100%;
         object-fit: contain;
       }
+
+      /* Chỉnh thanh progress bar */
+      .progress {
+        height: 20px;
+        background-color: rgba(255, 165, 0, 0.4) !important;
+        background-image: none !important;
+        border-radius: 10px;
+      }
+
+      .progress-bar {
+        background-image: linear-gradient(to bottom, #f89b7f 0%, #ffa500 100%);
+      }
+
+      /* Thêm tag sản phẩm mới và giảm giá */
+      .discount-label {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: #f44336;
+        color: white;
+        padding: 5px 10px;
+        font-size: 14px;
+        border-radius: 5px;
+      }
+
+      .new-label {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        background-color: #f44336;
+        color: white;
+        padding: 10px 10px;
+        font-size: 14px;
+        border-radius: 5px;
+      }
     </style>
-    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <!-- NAV -->
@@ -44,7 +113,7 @@
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img
-            src="https://i.pinimg.com/474x/72/2b/53/722b53420e9122fd49792214db54150c.jpg"
+            src="https://i.pinimg.com/736x/44/5c/9f/445c9f012046dc91347229cf5061e184.jpg"
             alt="Logo"
             class="homepage-header-logo"
             height="30"
@@ -165,21 +234,21 @@
       <div class="carousel-inner" role="listbox">
         <div class="item active">
           <img
-            src="https://i.pinimg.com/474x/16/75/b5/1675b5369d6408d69f6eb800902ac78c.jpg"
+            src="https://i.pinimg.com/474x/e4/ce/d8/e4ced80a09f1c8e93068ddc65790b3d7.jpg"
             alt="..."
           />
           <div class="carousel-caption">...</div>
         </div>
         <div class="item">
           <img
-            src="https://i.pinimg.com/474x/c3/c8/db/c3c8db52a3a030bcbe40853c53a2bfa8.jpg"
+            src="https://i.pinimg.com/474x/63/82/82/63828290f8fa7d61260d9e4647eaa8d1.jpg"
             alt="..."
           />
           <div class="carousel-caption">...</div>
         </div>
         <div class="item">
           <img
-            src="https://i.pinimg.com/474x/d6/01/a7/d601a77ecf0b0acbe32e40a1a0d094be.jpg"
+            src="https://i.pinimg.com/474x/20/2f/93/202f93d956c1c4886caca7f0aee00447.jpg"
             alt="..."
           />
           <div class="carousel-caption">...</div>
@@ -249,16 +318,16 @@
             <!-- First Product -->
             <div class="col-sm-6 col-md-4">
               <div class="thumbnail">
-                <div class="product-label-wrapper">
-                  <div class="discount-label">-19%</div>
-                  <div class="status-label">New</div>
-                  <img
-                    class="xzoom"
-                    src="https://i.pinimg.com/474x/5a/63/3d/5a633d8419edae7a41d7c22f98614ed6.jpg"
-                    xoriginal="https://i.pinimg.com/474x/5a/63/3d/5a633d8419edae7a41d7c22f98614ed6.jpg"
-                    alt="Product Image"
-                  />
-                </div>
+                <img
+                  class="xzoom"
+                  src="https://i.pinimg.com/474x/d4/74/e2/d474e26ca95b4be6d4e8aea7447d9955.jpg"
+                  xoriginal="https://i.pinimg.com/474x/d4/74/e2/d474e26ca95b4be6d4e8aea7447d9955.jpg"
+                  alt="Product Image"
+                />
+                <!-- Discount Label -->
+                <div class="discount-label">-19%</div>
+                <!-- New Label -->
+                <div class="new-label">New</div>
                 <div class="add-to-cart">
                   <a
                     href="#"
@@ -273,36 +342,56 @@
                   <h4>
                     <a href="product.html">1<sup>st</sup> Quần jean</a>
                   </h4>
-                  <p>Quần jean nam form suông ống rộng, chất liệu denim cotton cao cấp.</p>
+                  <p>
+                    Quần jean nam form suông ống rộng, chất liệu denim cotton
+                    cao cấp.
+                  </p>
                   <div class="ratings">
                     <p class="pull-right">
                       <a href="product.html#comments">15 reviews</a>
                     </p>
                     <p>
-                      <span class="glyphicon glyphicon-star"></span>
-                      <span class="glyphicon glyphicon-star"></span>
-                      <span class="glyphicon glyphicon-star"></span>
-                      <span class="glyphicon glyphicon-star"></span>
-                      <span class="glyphicon glyphicon-star"></span>
+                      <input
+                        id="input-rating"
+                        name="input-rating"
+                        class="rating"
+                        data-size="xs"
+                        data-show-clear="false"
+                        data-show-caption="false"
+                        value="5"
+                        data-readonly="true"
+                      />
                     </p>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      aria-valuenow="95"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 95%"
+                    >
+                      <span><i class="fas fa-fire"></i> Sắp bán hết</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-        
+
             <!-- Second Product -->
             <div class="col-sm-6 col-md-4">
               <div class="thumbnail">
-                <div class="product-label-wrapper">
-                  <div class="discount-label">-10%</div>
-                  <div class="status-label">Best Seller</div>
-                  <img
-                    class="xzoom"
-                    src="https://i.pinimg.com/474x/cb/75/ad/cb75ad18113384d88c25d5c71ef0d557.jpg"
-                    xoriginal="https://i.pinimg.com/474x/cb/75/ad/cb75ad18113384d88c25d5c71ef0d557.jpg"
-                    alt="Product Image"
-                  />
-                </div>
+                <img
+                  class="xzoom"
+                  src="https://i.pinimg.com/474x/f3/d1/7e/f3d17e5c5a8bdf0c3bbb9a28fb91b7f7.jpg"
+                  xoriginal="https://i.pinimg.com/474x/f3/d1/7e/f3d17e5c5a8bdf0c3bbb9a28fb91b7f7.jpg"
+                  alt="Product Image"
+                />
+                <!-- Discount Label -->
+                <div class="discount-label">-19%</div>
+                <!-- New Label -->
+                <div class="new-label">New</div>
                 <div class="add-to-cart">
                   <a
                     href="#"
@@ -317,36 +406,59 @@
                   <h4>
                     <a href="product.html">2<sup>nd</sup> Áo sơ mi</a>
                   </h4>
-                  <p>Áo sơ mi nam tay dài vải LINEN cao cấp, mềm mại thoải mái, cổ V bẻ nam tính.</p>
+                  <p>
+                    Áo sơ mi nam tay dài vải LINEN cao cấp, mềm mại thoải mái,
+                    cổ V bẻ nam tính.
+                  </p>
                   <div class="ratings">
                     <p class="pull-right">
                       <a href="product.html#comments">10 reviews</a>
                     </p>
                     <p>
-                      <span class="glyphicon glyphicon-star"></span>
-                      <span class="glyphicon glyphicon-star"></span>
-                      <span class="glyphicon glyphicon-star"></span>
-                      <span class="glyphicon glyphicon-star"></span>
-                      <span class="glyphicon glyphicon-star-empty"></span>
+                      <input
+                        id="input-rating"
+                        name="input-rating"
+                        class="rating"
+                        data-size="xs"
+                        data-show-clear="false"
+                        data-show-caption="false"
+                        value="4"
+                        data-readonly="true"
+                      />
                     </p>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      aria-valuenow="20"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 20%"
+                    ></div>
+                    <div
+                      style="font-size: 12px; color: #fff; text-align: center"
+                    >
+                      Đã bán 20
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-        
+
             <!-- Third Product -->
             <div class="col-sm-6 col-md-4">
               <div class="thumbnail">
-                <div class="product-label-wrapper">
-                  <div class="discount-label">-15%</div>
-                  <div class="status-label">New</div>
-                  <img
-                    class="xzoom"
-                    src="https://i.pinimg.com/474x/9e/7e/be/9e7ebe3c02c46926ee9b105f1f3b1dc6.jpg"
-                    xoriginal="https://i.pinimg.com/474x/9e/7e/be/9e7ebe3c02c46926ee9b105f1f3b1dc6.jpg"
-                    alt="Product Image"
-                  />
-                </div>
+                <img
+                  class="xzoom"
+                  src="https://i.pinimg.com/474x/89/c8/dd/89c8dd264cdc0e38d164de16601aa004.jpg"
+                  xoriginal="https://i.pinimg.com/474x/89/c8/dd/89c8dd264cdc0e38d164de16601aa004.jpg"
+                  alt="Product Image"
+                />
+                <!-- Discount Label -->
+                <div class="discount-label">-19%</div>
+                <!-- New Label -->
+                <div class="new-label">New</div>
                 <div class="add-to-cart">
                   <a
                     href="#"
@@ -367,21 +479,42 @@
                       <a href="product.html#comments">8 reviews</a>
                     </p>
                     <p>
-                      <span class="glyphicon glyphicon-star"></span>
-                      <span class="glyphicon glyphicon-star"></span>
-                      <span class="glyphicon glyphicon-star"></span>
-                      <span class="glyphicon glyphicon-star-half"></span>
-                      <span class="glyphicon glyphicon-star-empty"></span>
+                      <input
+                        id="input-rating"
+                        name="input-rating"
+                        class="rating"
+                        data-size="xs"
+                        data-show-clear="false"
+                        data-show-caption="false"
+                        value="4"
+                        data-readonly="true"
+                      />
                     </p>
+                  </div>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      aria-valuenow="40"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width: 40%"
+                    ></div>
+                    <div
+                      style="font-size: 12px; color: #fff; text-align: center"
+                    >
+                      Đã bán 40
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+
+            <!-- Add more products in the same structure as needed -->
           </div>
         </div>
-        
-        <!-- Kết thúc phần mô tả chi tiết sản phẩm -->
 
+        <!-- Kết thúc phần mô tả chi tiết sản phẩm -->
       </div>
     </div>
     <!-- end category -->
@@ -421,20 +554,23 @@
               <div class="col-sm-6">
                 <img
                   class="img-responsive xzoom"
-                  src="https://i.pinimg.com/474x/e9/ce/43/e9ce43a24fe9896384ed9e80a6d5fafb.jpg"
-                  xoriginal="https://i.pinimg.com/474x/e9/ce/43/e9ce43a24fe9896384ed9e80a6d5fafb.jpg"
+                  src="https://i.pinimg.com/474x/0b/f7/71/0bf7717fefbb7a58923e7a631dfeec20.jpg"
+                  xoriginal="https://i.pinimg.com/474x/0b/f7/71/0bf7717fefbb7a58923e7a631dfeec20.jpg"
                   alt=""
                 />
                 <div class="xzoom-thumbs row">
                   <div class="col-xs-3">
-                    <a href="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lyt4g1wfmhsx8b.webp">
+                    <a
+                      href="https://i.pinimg.com/474x/67/89/c5/6789c5e2f8018e7cf1bfdd8d0c3c42bc.jpg"
+                    >
                       <img
                         width="100px"
                         class="xzoom-gallery"
-                        src="https://i.pinimg.com/474x/f6/fa/57/f6fa57a18e5d7c3d7590d102cb346e0d.jpg"
+                        src="https://i.pinimg.com/474x/67/89/c5/6789c5e2f8018e7cf1bfdd8d0c3c42bc.jpg"
                         alt="Thumbnail 1"
                         class="img-thumbnail img-responsive"
                       />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -496,11 +632,16 @@
       <div class="ratings">
         <p class="pull-right">3 reviews</p>
         <p>
-          <span class="glyphicon glyphicon-star"></span>
-          <span class="glyphicon glyphicon-star"></span>
-          <span class="glyphicon glyphicon-star"></span>
-          <span class="glyphicon glyphicon-star"></span>
-          <span class="glyphicon glyphicon-star-empty"> 4.0 stars</span>
+          <input
+            id="input-rating"
+            name="input-rating"
+            class="rating"
+            data-size="xs"
+            data-show-clear="false"
+            data-show-caption="false"
+            value="4"
+            data-readonly="true"
+          />
         </p>
       </div>
 
@@ -514,11 +655,16 @@
       <!-- Customer Reviews -->
       <div class="row">
         <div class="col-md-12">
-          <span class="glyphicon glyphicon-star"></span>
-          <span class="glyphicon glyphicon-star"></span>
-          <span class="glyphicon glyphicon-star"></span>
-          <span class="glyphicon glyphicon-star"></span>
-          <span class="glyphicon glyphicon-star-empty"></span>
+          <input
+            id="input-rating"
+            name="input-rating"
+            class="rating"
+            data-size="xs"
+            data-show-clear="false"
+            data-show-caption="false"
+            value="4"
+            data-readonly="true"
+          />
           David More
           <span class="pull-right">1 day ago</span>
           <p>From <em>United States</em></p>
@@ -532,10 +678,16 @@
       <!-- Add more reviews here -->
       <div class="row">
         <div class="col-md-12">
-          <span class="glyphicon glyphicon-star"></span>
-          <span class="glyphicon glyphicon-star"></span>
-          <span class="glyphicon glyphicon-star"></span>
-          <span class="glyphicon glyphicon-star-empty"></span>
+          <input
+            id="input-rating"
+            name="input-rating"
+            class="rating"
+            data-size="xs"
+            data-show-clear="false"
+            data-show-caption="false"
+            value="4"
+            data-readonly="true"
+          />
           Jane Doe
           <span class="pull-right">2 days ago</span>
           <p>From <em>Canada</em></p>
@@ -556,7 +708,7 @@
             <div class="col-sm-1">
               <img
                 class="img-responsive"
-                src="https://i.pinimg.com/474x/72/2b/53/722b53420e9122fd49792214db54150c.jpg"
+                src="https://i.pinimg.com/474x/67/89/c5/6789c5e2f8018e7cf1bfdd8d0c3c42bc.jpg"
                 alt="Product Image"
               />
             </div>
