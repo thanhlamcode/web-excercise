@@ -1,11 +1,30 @@
-.xzoom-thumbs {
-  text-align: center;
-  margin-bottom: 10px;
-  display: flex;
-  margin-top: 20px;
-  margin-left: 0px;
+/* Wrapper for product label */
+.product-label-wrapper {
+  position: relative;
 }
 
-.xzoom-thumbs a {
-  margin-right: 10px;
+/* Discount label */
+.discount-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* New or Best Seller label */
+.status-label {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff4500; /* Orange-red color */
+  color: white;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
 }
