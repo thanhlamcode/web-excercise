@@ -4,31 +4,32 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must
-come *after* these tags -->
+
     <title>Bootstrap 101 Template</title>
-    <!-- Bootstrap -->
-    <!-- Latest compiled and minified CSS -->
+    <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
       integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
       crossorigin="anonymous"
     />
-    <!-- Optional theme -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
-      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+    <!-- xZoom CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/xzoom/dist/xzoom.css" />
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
       crossorigin="anonymous"
-    />
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --
->
-<-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    ></script>
+
+    <!-- xZoom JS -->
+    <script src="https://unpkg.com/xzoom/dist/xzoom.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- NAV -->
@@ -379,26 +380,46 @@ come *after* these tags -->
         </div>
         <div class="col-sm-8 col-md-9">
           <div class="thumbnail">
+            <!-- Image Gallery with xZoom -->
             <div class="row">
               <div class="col-sm-6">
                 <img
-                  class="img-responsive"
-                  src="http://placehold.it/750x600"
-                  alt=""
+                  class="img-responsive xzoom"
+                  src="./img/snoop1.jpg"
+                  xoriginal="./img/snoop1.jpg"
+                  alt="Main Image"
                 />
-                <div class="thumbnails row">
-                  <div class="col-xs-3">
-                    <a href="#">
-                      <img
-                        src="http://placehold.it/750x600"
-                        alt=""
-                        class="img-thumbnail img-responsive"
-                      />
-                    </a>
-                  </div>
+                <div class="xzoom-thumbs row">
+                  <a class="col-3" href="./img/snoop2.jfif">
+                    <img
+                      width="100px"
+                      class="xzoom-gallery"
+                      src="./img//snoop2.jfif"
+                      alt="Thumbnail 1"
+                    />
+                  </a>
+                  <a href="./img//snoop3.jfif">
+                    <img
+                      width="100px"
+                      class="xzoom-gallery"
+                      src="./img//snoop3.jfif"
+                      alt="Thumbnail 2"
+                    />
+                  </a>
+                  <a href="./img/snoopy.webp">
+                    <img
+                      width="100px"
+                      class="xzoom-gallery"
+                      src="./img//snoopy.webp"
+                      alt="Thumbnail 3"
+                    />
+                  </a>
                 </div>
               </div>
-              <div class="col-sm-6">
+            </div>
+            <!-- Image Gallery with xZoom -->
+            <div class="row">
+              <div class="col-lg-12 col-sm-6">
                 <form role="form">
                   <div class="number form-group">
                     <label>Number</label>
@@ -560,17 +581,16 @@ come *after* these tags -->
         <!-- End of Order Item -->
       </div>
     </div>
-
     <!--End Status -->
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <!-- Latest compiled and minified JavaScript -->
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-      crossorigin="anonymous"
-    ></script>
+    <!-- Initialize xZoom -->
+    <script>
+      $(document).ready(function () {
+        // Loop through each .xzoom element to apply the zoom effect individually
+        $(".xzoom").each(function () {
+          $(this).xzoom({ tint: "#333", Xoffset: 15 });
+        });
+      });
+    </script>
   </body>
 </html>

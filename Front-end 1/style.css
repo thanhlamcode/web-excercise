@@ -1,0 +1,11 @@
+.xzoom-thumbs {
+  text-align: center;
+  margin-bottom: 10px;
+  display: flex;
+  margin-top: 20px;
+  margin-left: 0px;
+}
+
+.xzoom-thumbs a {
+  margin-right: 10px;
+}

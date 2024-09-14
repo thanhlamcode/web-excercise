@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+
+    <!-- xZoom CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/xzoom/dist/xzoom.css" />
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- xZoom JS -->
+    <script src="https://unpkg.com/xzoom/dist/xzoom.min.js"></script>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Brand</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Image Gallery with xZoom -->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <img
+            class="img-responsive xzoom"
+            src="http://placehold.it/750x600"
+            alt="Main Image"
+          />
+          <div class="xzoom-thumbs row">
+            <a class="col-3" href="http://placehold.it/750x600">
+              <img
+                width="100px"
+                class="xzoom-gallery"
+                src="http://placehold.it/750x600"
+                alt="Thumbnail 1"
+              />
+            </a>
+            <a href="http://placehold.it/750x600">
+              <img
+                width="100px"
+                class="xzoom-gallery"
+                src="http://placehold.it/750x600"
+                alt="Thumbnail 2"
+              />
+            </a>
+            <a href="http://placehold.it/750x600">
+              <img
+                width="100px"
+                class="xzoom-gallery"
+                src="http://placehold.it/750x600"
+                alt="Thumbnail 3"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Image Gallery with xZoom -->
+
+    <!-- Initialize xZoom -->
+    <script>
+      $(document).ready(function () {
+        // Loop through each .xzoom element to apply the zoom effect individually
+        $(".xzoom").each(function () {
+          $(this).xzoom({ tint: "#333", Xoffset: 15 });
+        });
+      });
+    </script>
+  </body>
+</html>
